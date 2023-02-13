@@ -20,7 +20,7 @@ public class IndexController {
 
     @Autowired
     ClienteDao clienteDao;
-    
+
     @GetMapping("/")
     public String inicio(Model model) {
         log.info("Ahora utilizando MVC");
@@ -30,14 +30,13 @@ public class IndexController {
 //        Cliente cliente = new Cliente("Lawrence", "Calvo", "lawrencect28@gmail.com", "77889944");
 //        Cliente cliente2 = new Cliente("Joshua", "Calvo", "tuky2807@gmail.com", "88994402");
 //        Cliente cliente3 = new Cliente("Jairo", "Calvo", "tuky2807@gmail.com", "77894596");
-//        model.addAttribute("cliente", cliente);
-//
-//        List<Cliente> clientes = Arrays.asList(cliente, cliente2, cliente3);
+ //        model.addAttribute("cliente", cliente);
 
+//      List<Cliente> clientes = Arrays.asList(cliente, cliente2, cliente3);
 
-          var clientes = clienteDao.findAll();
-          model.addAttribute("clientes", clientes);
-         
+        var clientes = clienteDao.findAll();
+        model.addAttribute("clientes", clientes);
+
         return "index";
     }
 

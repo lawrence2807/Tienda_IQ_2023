@@ -7,12 +7,12 @@
     <body>
 <!--                <div>Saludos</div>
                 <p th:text="${MensajeSaludo}"></p> -->
-                <h1>Un cliente</h1>
+<!--                <h1>Un cliente</h1>
                 <p>Nombre <span th:text="${cliente.nombre}"></span></p>
                 <p>Apellidos <span th:text="${cliente.apellidos}"></span></p>
                 <p>Correo <span th:text="${cliente.correo}"></span></p>
-                <p>Telefono <span th:text="${cliente.telefono  }"></span></p>
-<!--        <h1>Clientes</h1>
+                <p>Telefono <span th:text="${cliente.telefono  }"></span></p>-->
+        <h1>Clientes</h1>
         <table border="1">
             <thead>
             <th>Nombre</th>
@@ -21,14 +21,14 @@
             <th>Telefono</th>
         </thead>
         <tbody>
-            <tr th:each="cliente : ${clientes}">
+            <tr th:each="clientes : ${clientes}">
                 <td th:text="${clientes.nombre}"></td>
                 <td th:text="${clientes.apellidos}"></td>
                 <td th:text="${clientes.correo}"></td>
                 <td th:text="${clientes.telefono}"></td>
             </tr>
         </tbody>
-    </table>-->
+    </table>
 </body>
 </html>
 
