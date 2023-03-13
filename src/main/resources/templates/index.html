@@ -3,12 +3,12 @@
     <head>
         <title>TechShop</title>
         <meta charset="UTF-8">
+        <link href="/css/menu.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-        <header th:replace="layout/plantilla :: header"/>
-            
+        <header th:replace="layout/plantilla :: header"/>  
         </header>
-        <h2>Clientes</h2>
+        <h2>Nuestros Articulos</h2>
         <a th:href="@{/nuevoCliente}">Nuevo Cliente</a>
         <br/>
         <div th:if="${clientes != null and !clientes.empty}">
@@ -38,4 +38,5 @@
         <footer th:replace="layout/plantilla :: footer"/>
     </body>
 </html>
+
 
