@@ -1,4 +1,5 @@
 package comTienda_IQ2023.controller;
+
 import comTienda_IQ2023.domain.Cliente;
 import comTienda_IQ2023.service.ClienteService;
 import lombok.extern.slf4j.Slf4j;
@@ -18,5 +19,14 @@ public class IndexController {
 
     @Autowired
     ClienteService clienteService;
- 
+
+    @GetMapping("/")
+    public String inicio(Model model) {
+        log.info("Ahora utilizando MVC");
+
+        var clientes = clienteService.getClientes();
+        model.addAttribute("clientes", clientes);
+
+        return "index";
+    }
 }
