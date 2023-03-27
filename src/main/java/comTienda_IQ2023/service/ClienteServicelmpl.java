@@ -1,5 +1,6 @@
 package comTienda_IQ2023.service;
 
+import comTienda_IQ2023.dao.ArticuloDao;
 import comTienda_IQ2023.dao.ClienteDao;
 import comTienda_IQ2023.domain.Cliente;
 
@@ -14,6 +15,8 @@ public class ClienteServicelmpl implements ClienteService {
 
     @Autowired
     ClienteDao clienteDao;
+    @Autowired
+    ArticuloDao articuloDao;
 
     @Override
     @Transactional(readOnly = true) //Para manejo transacciones de solo lectura
