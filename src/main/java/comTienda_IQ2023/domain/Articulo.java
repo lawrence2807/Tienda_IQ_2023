@@ -1,6 +1,6 @@
 package comTienda_IQ2023.domain;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.io.Serializable;
 import lombok.Data;
 
@@ -19,17 +19,21 @@ public class Articulo implements Serializable {
     private boolean precio;
     private int existencias;
     private boolean activo;
+    private String rutaImagen;
 
     public Articulo() {
     }
 
-    public Articulo(Long idCategoria, String descripcion, String detalle, boolean precio, int existencias, boolean activo) {
+    public Articulo(Long idCategoria, String descripcion, String detalle, boolean precio, int existencias, boolean activo, String rutaImagen) {
         this.idCategoria = idCategoria;
         this.descripcion = descripcion;
         this.detalle = detalle;
         this.precio = precio;
         this.existencias = existencias;
         this.activo = activo;
+        this.rutaImagen = rutaImagen;
     }
+
+ 
 
 }
